@@ -12,21 +12,21 @@
         <form action="">
             Pierwsza data<br>
             <input type="text" name="pierwszaData" value="" placeholder="YYYY-MM-DD" id="1">
-            <br>
-            Druga data<br>
+            <br> Druga data<br>
             <input type="text" name="drugaData" value="" placeholder="YYYY-MM-DD" id="2">
         </form>
         <button onclick="funkcja()">Oblicz</button>
+        <p>Na razie wynik jest widoczny w konsoli</p>
     </div>
 
     <script>
         function funkcja() {
-            var a = new Date (document.getElementById('1').value);
-            var b = new Date (document.getElementById('2').value);
+            var a = new Date(document.getElementById('1').value);
+            var b = new Date(document.getElementById('2').value);
             var c = a.getTime();
             var d = b.getTime();
             var e = c - d;
-            var f = e/86400000;
+            var f = e / 86400000;
             console.log(f);
         }
     </script>
