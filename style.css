@@ -58,6 +58,7 @@
         font-family: Bebas Neue, sans-serif;
         padding: 0px;
         margin: 0px;
+        position: sticky;
     }
     
     body {
@@ -83,4 +84,10 @@
     #work {
         text-decoration: underline;
         font-size: 2vw;
+    }
+    audio{
+        
+        margin-top: 1000%;
+        margin-left: 38%;
+        margin-bottom:10px;
     }
