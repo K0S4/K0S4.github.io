@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleNumbers.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png" sizes="16x16">
 </head>
 
 <body>
     <div id="form">
+        <p>Liczba dni pomiędzy datami</p>
         <form action="">
-            Pierwsza data<br>
-            <input type="text" name="pierwszaData" value="" placeholder="YYYY-MM-DD" id="1">
-            <br> Druga data<br>
-            <input type="text" name="drugaData" value="" placeholder="YYYY-MM-DD" id="2">
+            <p>Póżniejsza data</p>
+            <input type="date" name="pierwszaData" value="" placeholder="YYYY-MM-DD" id="1">
+            <p>Wcześniejsza data</p>
+            <input type="date" name="drugaData" value="" placeholder="YYYY-MM-DD" id="2">
         </form>
         <button onclick="funkcja()">Oblicz</button>
-        <p>Na razie wynik jest widoczny w konsoli<p id="wynik"></p></p>
+        <p>Wynik</p>
+        <div id="wynik">---</div>
     </div>
 
     <script>
@@ -27,7 +30,7 @@
             var d = b.getTime();
             var e = c - d;
             var f = e / 86400000;
-            console.log(f);
+            document.getElementById("wynik").innerHTML = f;
         }
     </script>
 </body>
