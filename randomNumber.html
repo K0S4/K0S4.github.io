@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styleRandomNumbers.css">
+</head>
+<body>
+    <div class="container">
+    <p id="suga">---</p>
+    <button onclick="randomNumber()">Generuj Losową Liczbę</button>
+    </div>
+    <script>
+        function randomNumber() {
+            var y = 1;
+            var z = 100;
+            var x = Math.floor((Math.random() *z) + y);
+            document.getElementById("suga").innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>
