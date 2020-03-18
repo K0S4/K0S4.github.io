@@ -1,0 +1,21 @@
+.image {
+    width: 30vw;
+    height: auto;
+    opacity: 100%;
+}
+
+.image:hover {
+    opacity: 80%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0deg, #7dbbfa, #fff);
+    height: 100vh;
+}
+
+a {
+    width: auto;
+    margin: 1.5vw;
+}
