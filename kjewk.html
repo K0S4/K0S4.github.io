@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Kjewk</title>
+        <link rel = "shortcut icon" href="" >
+
+    </head>
+    <body>
+        <main>
+            <div>
+                <img id = 'meme' src = '' alt = 'meme'>
+                <button type = 'button' id = 'przycisk'>Losuj</button>
+            </div>
+        </main>
+        <script>
+            let tablica = ['ant.jpg', 'piano.jpg', 'grass.jpg'];
+            let i = 0;
+            let y, z;
+            let x = tablica.length;
+            function losuj() {
+                if (i > 0) {
+                    while (y == z) {
+                        y = Math.floor(Math.random() * x);
+                    }
+                    document.getElementById('meme').src = tablica[y];
+                    z = y;
+                } else {
+                    y = Math.floor(Math.random() * x);
+                    document.getElementById('meme').src = tablica[y];
+                    z = y;
+                    i++;
+                }
+            }
+            losuj();
+            document.getElementById('przycisk').addEventListener('click', losuj);
+        </script>
+    </body>
+</html>

@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styleRandomNumbers.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styleRandomNumbers.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">🢀</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <div class="container">
-    <p id="suga">---</p>
-    <button onclick="randomNumber()">Generuj Losową Liczbę</button>
+      <p id="suga">---</p>
+      <button onclick="randomNumber()">Generuj Losową Liczbę</button>
+      <input
+        type="number"
+        placeholder="Wpisz minimalną wartość"
+        id="min"
+        class="input"
+      />
+      <input
+        type="number"
+        placeholder="Wpisz minimalną wartość"
+        id="maks"
+        class="input"
+      />
     </div>
     <script>
-        function randomNumber() {
-            var y = 1;
-            var z = 100;
-            var x = Math.floor((Math.random() *z) + y);
-            document.getElementById("suga").innerHTML = x;
-        }
+      function randomNumber() {
+        var y = Math.abs(document.getElementById("min").value);
+        var z = Math.abs(document.getElementById("maks").value);
+        var x = Math.floor(Math.random() * (z - y + 1) + y);
+        document.getElementById("suga").innerHTML = x;
+      }
     </script>
-</body>
-
+  </body>
 </html>
