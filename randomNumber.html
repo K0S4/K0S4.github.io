@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleRandomNumbers.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,12 +18,15 @@
     <div class="container">
     <p id="suga">---</p>
     <button onclick="randomNumber()">Generuj Losową Liczbę</button>
+    <p>Wprowadź tylko dodatnie wartości. Jeśli wprowadzisz ujemne wartości zostaną one zamienione na wartości dodatnie</p>
+    <input type = 'number' placeholder = "Wpisz minimalną wartość" id = 'min'>
+    <input type = 'number' placeholder = "Wpisz minimalną wartość" id = 'maks'>
     </div>
     <script>
         function randomNumber() {
-            var y = 1;
-            var z = 100;
-            var x = Math.floor((Math.random() *z) + y);
+            var y = Math.abs(document.getElementById('min').value);
+            var z = Math.abs(document.getElementById('maks').value);
+            var x = Math.floor((Math.random() * (z - y + 1)) + y);
             document.getElementById("suga").innerHTML = x;
         }
     </script>
