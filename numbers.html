@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styleNumbers.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="icon" href="logo.png" type="image/png" sizes="16x16">
 </head>
@@ -13,17 +13,17 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">🢀</a></li>
             </ul>
         </nav>
     </header>
-    <div id="form">
+    <div id="form" class="container">
         <p>Liczba dni pomiędzy datami</p>
-        <form action="">
+        <form action="" class="form">
             <p>Póżniejsza data</p>
-            <input type="date" name="pierwszaData" value="" placeholder="YYYY-MM-DD" id="1">
+            <input type="date" name="pierwszaData" value="" placeholder="YYYY-MM-DD" id="1" class="input">
             <p>Wcześniejsza data</p>
-            <input type="date" name="drugaData" value="" placeholder="YYYY-MM-DD" id="2">
+            <input type="date" name="drugaData" value="" placeholder="YYYY-MM-DD" id="2" class="input">
         </form>
         <button onclick="funkcja()">Oblicz</button>
         <p>Wynik</p>
