@@ -80,6 +80,11 @@ body {
 }
 
 #work {
+  font-size: 2vw;
+  color: #000;
+}
+
+#work:hover {
   text-decoration: underline;
   font-size: 2vw;
   color: #b39a98;
