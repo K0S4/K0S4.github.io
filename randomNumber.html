@@ -47,7 +47,16 @@
           z = a;
         }
         var x = Math.floor(Math.random() * (z - y + 1) + y);
-        document.getElementById("suga").innerHTML = x;
+        
+        if(x==11 ||x==3||x==23||x==25){
+          
+          document.getElementById("suga").innerHTML = "21";
+        }else{
+          
+          document.getElementById("suga").innerHTML = x;
+          
+        };
+        
       }
     </script>
   </body>
